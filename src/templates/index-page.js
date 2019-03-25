@@ -81,7 +81,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
+                  <h3 className="has-text-weight-semibold is-size-2">Latest Challenges</h3>
                   <Challenge />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/challenges">
