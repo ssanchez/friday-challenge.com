@@ -8,18 +8,21 @@ tags:
   - date
   - datetime
   - javascript
-difficulty: Intermediate
+difficulty: 4
 ---
 I've always found the `Date` object in JavaScript particularly difficult to work with. Time and time zones are extremely complex and working with them can be a nightmare without helpful utilities like `moment` or it's more recent and more modular `datefns`. This requires a basic understanding of `Date` to complete but as you'll see in the answers there are a few tricks that make for a clean solution.
 
-Write a function that takes a negative or positive integer, 
-which represents the number of minutes before (-) or after (+) 
-Sunday midnight, and returns the day of the week and 
+Write a function that takes a negative or positive integer,
+which represents the number of minutes before (-) or after (+)
+Sunday midnight, and returns the day of the week and
 the time in 24hr format ('hh:mm') as a string.
 
-e.g. 
+e.g.
+
+```javascript
 sundayOffset(1); // "Sunday 00:01"
 sundayOffset(1440); // "Monday 00:00" (not 24:00)
+```
 
 [Challenge Link](https://codesandbox.io/s/2w624q2r2p)
 

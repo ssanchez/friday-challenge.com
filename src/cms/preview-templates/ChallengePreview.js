@@ -4,7 +4,7 @@ import { ChallengeTemplate } from '../../templates/challenge';
 
 const ChallengePreview = ({ entry, widgetFor }) => (
   <ChallengeTemplate
-    content={widgetFor('body')}
+    content={widgetFor('challenge')}
     description={entry.getIn(['data', 'description'])}
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}

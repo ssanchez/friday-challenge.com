@@ -10,4 +10,4 @@ CMS.registerPreviewTemplate('index', IndexPagePreview);
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);
-CMS.registerPreviewTemplate('blog', ChallengePreview);
+CMS.registerPreviewTemplate('challenge', ChallengePreview);
