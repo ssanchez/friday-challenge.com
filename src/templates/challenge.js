@@ -6,7 +6,16 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 
-export const ChallengeTemplate = ({ content, contentComponent, description, tags, title, helmet }) => {
+export const ChallengeTemplate = ({
+  content,
+  contentComponent,
+  tags,
+  title,
+  helmet,
+  difficulty,
+  challenger,
+  language
+}) => {
   const PostContent = contentComponent || Content;
 
   return (
@@ -15,8 +24,7 @@ export const ChallengeTemplate = ({ content, contentComponent, description, tags
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
-            <p>{description}</p>
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{`${title}`}</h1>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -30,6 +38,14 @@ export const ChallengeTemplate = ({ content, contentComponent, description, tags
                 </ul>
               </div>
             ) : null}
+            <dl>
+              <dt>Difficulty</dt>
+              <dd>{difficulty}</dd>
+              <dt>Challenger</dt>
+              <dd>{challenger}</dd>
+              <dt>language</dt>
+              <dd>{language}</dd>
+            </dl>
           </div>
         </div>
       </div>
@@ -40,9 +56,11 @@ export const ChallengeTemplate = ({ content, contentComponent, description, tags
 ChallengeTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
+  description: PropTypes.string,
+  language: PropTypes.string,
+  challenger: PropTypes.string
 };
 
 const Challenge = ({ data }) => {
@@ -53,15 +71,17 @@ const Challenge = ({ data }) => {
       <ChallengeTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Challenge">
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        difficulty={post.frontmatter.difficulty}
+        language={post.frontmatter.language}
+        challenger={post.frontmatter.challenger}
       />
     </Layout>
   );
@@ -83,8 +103,10 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
+        difficulty
+        language
+        challenger
       }
     }
   }
