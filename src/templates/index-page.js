@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Features from '../components/Features';
 import Challenge from '../components/Challenge';
 
 export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, main }) => (
