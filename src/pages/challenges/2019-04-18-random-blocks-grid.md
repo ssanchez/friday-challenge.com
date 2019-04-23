@@ -8,7 +8,7 @@ tags:
   - Grid
   - Layout
 language: CSS
-difficulty: '4'
+difficulty: 4
 challenge: >-
   Use CSS Grid to layout these blocks in the mostvisually appealing way
   possible! Avoid unnecessary gaps andlayout blocks generally visually balanced.
@@ -30,4 +30,3 @@ solutions: >-
 
   [https://codepen.io/cstein/pen/oOevqa](https://codepen.io/cstein/pen/oOevqa)
 ---
-
