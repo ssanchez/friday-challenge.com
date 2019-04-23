@@ -6,9 +6,9 @@
 
 [Friday Challenge](https://friday-challenge.com) is the website where we manage code challenges with solutions and documentation.
 
-## What is Friday Challenge
+## What is Friday Challenge?
 
-[Friday challenge](https://friday-challenge.com) is primarily a training tool. Tackling a challenge each week is an incredible learning experience weather or not you are able to complete it. Additionally, you can view many variations of how others implement the same challenge to consider the tradeoffs of various approaches. Here we primarily focus on frontend challenges but we're open to any language.
+[Friday challenge](https://friday-challenge.com) is primarily a training tool. Tackling a challenge each week is an incredible learning experience, whether or not you are able to complete it. Additionally, you can view many variations of how others implement the same challenge to consider the tradeoffs of various approaches. Here we primarily focus on frontend challenges, but we're open to any language.
 
 # CONTRIBUTING
 
