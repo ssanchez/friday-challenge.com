@@ -8,7 +8,7 @@ tags:
   - date
   - datetime
   - javascript
-difficulty: 4
+difficulty: '4'
 ---
 I've always found the `Date` object in JavaScript particularly difficult to work with. Time and time zones are extremely complex and working with them can be a nightmare without helpful utilities like `moment` or it's more recent and more modular `datefns`. This requires a basic understanding of `Date` to complete but as you'll see in the answers there are a few tricks that make for a clean solution.
 
