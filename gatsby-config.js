@@ -2,9 +2,9 @@ var proxy = require("http-proxy-middleware");
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Friday Challenge",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "Welcome to Friday Challenge, a site maintained by the fine folks at Wayfair for presenting frontend code challenges that edify and inspire. Every single Friday — well, almost every Friday — you will find a new challenge posted here. At the end of the day, we pick a winner and some number or runners-up. Give it a try."
   },
   plugins: [
     "gatsby-plugin-react-helmet",
