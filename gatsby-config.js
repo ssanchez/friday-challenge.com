@@ -31,6 +31,12 @@ module.exports = {
         name: "images"
       }
     },
+    {
+      resolve: `gatsby-plugin-fullstory`,
+      options: {
+        fs_org: "MB5M0"
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

@@ -4708,6 +4708,13 @@ gatsby-link@^2.0.12:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-fullstory@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-fullstory/-/gatsby-plugin-fullstory-2.0.5.tgz#73b0c4bef297f5c89166f2248414157c9c477c50"
+  integrity sha512-34wxtRW1otF0V/p1cycJvpEdlndjsFrdXmu1TbfXWVnThGO1H3+JsERLbdGdG5vMa3C92kLs4ko+LSCqLWdiTg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-netlify-cms@^3.0.9:
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.12.tgz#1812653fba2690f85b2796fa22e4b59b7b169520"
