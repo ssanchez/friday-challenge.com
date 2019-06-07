@@ -1,38 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
 
-import Layout from '../components/Layout';
-import Challenge from '../components/Challenge';
+import Layout from "../components/Layout";
+import Challenges from "../components/Challenges";
 
 export const IndexPageTemplate = ({ image, title, subheading, mainpitch }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${!!image.childImageSharp ? image.childImageSharp.fluid.src : image})`,
+        backgroundImage: `url(${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`
       }}
     >
       <div
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column'
+          display: "flex",
+          height: "150px",
+          lineHeight: "1",
+          justifyContent: "space-around",
+          alignItems: "left",
+          flexDirection: "column"
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em'
+            boxShadow:
+              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+            backgroundColor: "rgb(255, 68, 0)",
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em"
           }}
         >
           {title}
@@ -40,11 +43,12 @@ export const IndexPageTemplate = ({ image, title, subheading, mainpitch }) => (
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow: 'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em'
+            boxShadow:
+              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+            backgroundColor: "rgb(255, 68, 0)",
+            color: "white",
+            lineHeight: "1",
+            padding: "0.25em"
           }}
         >
           {subheading}
@@ -66,8 +70,10 @@ export const IndexPageTemplate = ({ image, title, subheading, mainpitch }) => (
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">Latest Challenges</h3>
-                  <Challenge />
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    Latest Challenges
+                  </h3>
+                  <Challenges />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/challenges">
                       Read more
@@ -87,7 +93,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  mainpitch: PropTypes.object
 };
 
 const IndexPage = ({ data }) => {
